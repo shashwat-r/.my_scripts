@@ -1,0 +1,71 @@
+#!/Users/shashwatraghuvanshi/miniconda3/bin/python3
+
+"""
+This script is used to run other python scripts in this folder
+"""
+
+import os
+import click
+
+program_location = {
+	'KeyPresser': './KeyPresser'
+}
+
+def get_location(name):
+	if name not in program_location:
+		return False, None, "invalid name " + name
+	else:
+		return True, program_location[name], name + " is valid"
+
+def run_program(location, background):
+	valid, msg = False, ""
+
+	if background:
+		x = os.system("nohup " + location + "&")
+		if x == 0:
+			valid, msg = True, "Ran Program " + location + " in background"
+	else:
+		x = os.system(location)
+		if x == 0:
+			valid, msg = True, "Ran Program " + location
+
+	if not valid:
+		valid, msg = False, "Couldn't Run Program " + location
+
+	return valid, msg
+
+def kill_program(location):
+	total_location = 'python3\ ' + location
+	pid = os.popen('ps | grep ' + total_location).read().strip().split(' ')[0]
+	x = os.system('kill ' + pid)
+	
+	if x == 0:
+		return True, "Killed Program " + location
+	else:
+		return False, "Unable to Kill Program " + location
+
+def route_program(name, background, kill):
+	valid, location, msg = get_location(name)
+	if not valid:
+		return False, msg
+
+	if kill:
+		valid, msg = kill_program(location)
+		return valid, msg
+
+	valid, msg = run_program(location, background)
+	return valid, msg
+
+@click.command()
+@click.option('--name', '-n', help='Name of the script to run.')
+@click.option('--background', '-bg', type=bool, default=False, help='Runs the script in background if true')
+@click.option('--kill', '-k', type=bool, default=False, help='Kill the specified program if it is running')
+# @click.option('--programs', '-p', help='List all possible programs')
+# @click.option('--running', '-r', help='List all running programs')
+def run_script(name, background, kill):
+    """Simple program that runs NAME in BG mode."""
+    valid, msg = route_program(name, background, kill)
+    click.echo(msg)
+
+if __name__ == '__main__':
+    run_script()
