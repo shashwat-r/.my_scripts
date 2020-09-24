@@ -1,13 +1,15 @@
 #!/Users/shashwatraghuvanshi/miniconda3/bin/python3
 
 """
-The objective of this script is to press the function key every 5 mins to avoid locking of pc
+The objective of this script is to press the function key at regular intervals to avoid locking of pc
 """
 
 import pyautogui
 
+print('begin')
 while True:
-	pyautogui.press('fn', interval=60*5-1)
+	pyautogui.press('fn', interval=60)
+	print('done')
 
 # # Test
 # print('begin')
