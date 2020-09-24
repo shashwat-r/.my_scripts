@@ -1,0 +1,20 @@
+#!/Users/shashwatraghuvanshi/miniconda3/bin/python3
+
+"""
+The objective of this script is to press the function key at regular intervals to avoid locking of pc
+"""
+
+import pyautogui
+
+print('begin')
+while True:
+	pyautogui.press('fn', interval=60)
+	print('done')
+
+# # Test
+# print('begin')
+# pyautogui.press('shift', interval=2)
+# pyautogui.press(['fn'], presses=5, interval=2)
+# # pyautogui.press(['fn', 'del'], presses=5, interval=2)
+# # test behaviour by keeping cursor as |1234567.. and see the nos disappear
+# print('done')
