@@ -1,7 +1,8 @@
-#!/Users/shashwatraghuvanshi/miniconda3/bin/python3
+#!/usr/bin/env python
 
 """
 The objective of this script is to press the function key at regular intervals to avoid locking of pc
+You will need the pyautogui package installed into your python environment
 """
 
 import pyautogui
