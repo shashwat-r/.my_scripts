@@ -53,8 +53,8 @@ alias cd.....=.4
 alias cd......=.5
 alias cd.......=.6
 
-function mag() {
-    mkdir $1 && cd $1;
+function cdm() {
+    mkdir -p $1 && cd $1;
 }
 function chuck() {
 for i in {0..100}
