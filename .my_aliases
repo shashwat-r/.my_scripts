@@ -1,0 +1,124 @@
+# This file contains a list of command line shortcuts. To initialize them
+# at terminal startup, add the following commands to your shell config file
+# (eg: .zshrc, .bash_profile, .bashrc)
+#
+# if [ -f ~/.my_scripts/.my_aliases ]; then
+#     . ~/.my_scripts/.my_aliases
+# fi
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# brew aliases
+alias br='brew remove'
+alias bi='brew install'
+alias bcu='brew cleanup'
+alias bss='brew services start'
+alias bst='brew services stop'
+alias bsr='brew services restart'
+alias bsl='brew services list'
+
+alias ~='cd ~'
+alias Des='cd ~/Desktop'
+alias Doc='cd ~/Documents'
+alias Dow='cd ~/Downloads'
+
+alias .1='cd ..'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+alias .6='cd ../../../../../..'
+
+alias ..=.1
+alias ...=.2
+alias ....=.3
+alias .....=.4
+alias ......=.5
+alias .......=.6
+
+alias ..=.1
+alias ..2=.2
+alias ..3=.3
+alias ..4=.4
+alias ..5=.5
+alias ..6=.6
+
+alias cd..=.1
+alias cd...=.2
+alias cd....=.3
+alias cd.....=.4
+alias cd......=.5
+alias cd.......=.6
+
+function mag() {
+    mkdir $1 && cd $1;
+}
+function chuck() {
+for i in {0..100}
+    do
+        echo ""
+    done
+}
+alias where='which'
+alias .a='conda activate'
+alias .d='conda deactivate'
+alias python='/usr/local/bin/python3.8'
+
+alias hi='echo "Hello there buddy :)"'
+# alias rebash='source ~/.bash_profile'
+# alias .bp='vim ~/.bash_profile && source ~/.bash_profile'
+# alias .ba='vim ~/.bash_aliases && source ~/.bash_profile'
+alias ..zshrc='source ~/.zshrc'
+alias .zshrc='vim ~/.zshrc && source ~/.zshrc'
+alias .my_aliases='vim ~/.my_scripts/.my_aliases && source ~/.zshrc'
+alias .my_private_aliases='vim ~/.my_private_scripts/.my_aliases && source ~/.zshrc'
+
+alias path='echo $PATH'
+
+# laravel aliases
+alias new='laravel new'
+alias pa='php artisan'
+alias pas='php artisan serve'
+alias pat='php artisan tinker'
+alias pam='php artisan migrate'
+alias pamf='php artisan migrate:fresh'
+alias pamr='php artisan migrate:rollback'
+alias pah='php artisan help'
+
+#go aliases
+alias gomake='goimports -l -d ./ && go build'
+alias gorun='gomake && go run main.go'
+alias gocover='goverage -coverprofile=coverage.out ./... && go tool cover -func coverage.out && go tool cover -html=coverage.out'
+
+# apache aliases to run phpmyadmin (port 8888)
+alias apache_start='sudo apachectl start'
+alias apache_stop='sudo apachectl stop'
+alias apache_restart='sudo apachectl restart'
+
+# other alias
+alias findmyip='ifconfig | grep "inet "'
+alias unixtime='watch -n0 date +%s'
+# alias run='sudo !!' # runs previous command in terminal
+alias gg='git grep'
+
+alias net='watch -c -x zsh -ci connected'
+function connected() {
+    if nc -zw1 google.com 443; then
+        echo "\n\033[0;32mInternet Connected\033[0m"
+    else
+        echo "\n\033[0;31mInternet Disconnected\033[0m"
+    fi
+}
+
+function deib() {
+    docker exec -it $1 bash	
+}
+
+alias htdocs='cd /Applications/MAMP/htdocs'
+alias gosrc='cd ~/go/src/github.com/shashwat-r/'
+
+alias php.ini='vim /usr/local/etc/php/7.2/php.ini'
+alias kibana.yml='vim /usr/local/etc/kibana/kibana.yml'
