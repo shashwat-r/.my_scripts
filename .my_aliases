@@ -65,7 +65,7 @@ for i in {0..100}
 alias where='which'
 alias .a='conda activate'
 alias .d='conda deactivate'
-alias python='/usr/local/bin/python3.8'
+#alias python='/usr/local/bin/python3.8'
 
 alias hi='echo "Hello there buddy :)"'
 # alias rebash='source ~/.bash_profile'
@@ -77,6 +77,10 @@ alias .my_aliases='vim ~/.my_scripts/.my_aliases && source ~/.zshrc'
 alias .my_private_aliases='vim ~/.my_private_scripts/.my_aliases && source ~/.zshrc'
 
 alias path='echo $PATH'
+
+alias git_token='echo $GIT_TOKEN | pbcopy; echo "Copied GIT_TOKEN to clipboard"'
+
+alias docker-compose='docker compose'
 
 # laravel aliases
 alias new='laravel new'
@@ -112,6 +116,8 @@ function connected() {
         echo "\n\033[0;31mInternet Disconnected\033[0m"
     fi
 }
+
+alias containers='docker ps --format "table {{.ID}} {{.Names}}\t{{.Image}}"'
 
 function deib() {
     docker exec -it $1 bash	
