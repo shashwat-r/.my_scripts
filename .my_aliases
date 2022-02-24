@@ -53,7 +53,7 @@ alias cd.....=.4
 alias cd......=.5
 alias cd.......=.6
 
-function cdm() {
+function cde() {
     mkdir -p $1 && cd $1;
 }
 function chuck() {
@@ -128,3 +128,12 @@ alias gosrc='cd ~/go/src/github.com/shashwat-r/'
 
 alias php.ini='vim /usr/local/etc/php/7.2/php.ini'
 alias kibana.yml='vim /usr/local/etc/kibana/kibana.yml'
+
+function compare_sha256sum() {
+    diff <(sha256sum $1 | awk '{print $1}') <(sha256sum $2 | awk '{print $1}')
+}
+
+function list_pods(){
+    echo "> kubectl get pods -n" $1
+    kubectl get pods -n $1
+}
