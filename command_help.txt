@@ -18,13 +18,15 @@ chuck                               | alias: print 100 empty lines and scroll do
 rebash (deprecated)                 | alias: to source ~/.bash_profile
 ..zshrc                             | source ~/.zshrc
 ..zshrc                             | alias: reapply .zshrc
-.zshrc                              | vim ~/.zshrc && source ~/.zshrc'
+.zshrc                              | alias: vim ~/.zshrc && source ~/.zshrc'
 .zshrc                              | alias: edit and apply .zshrc
-.my_aliases                         | vim ~/.my_scripts/.my_aliases && source ~/.zshrc'
+.my_aliases                         | alias: vim ~/.my_scripts/.my_aliases && source ~/.zshrc'
+.my_aliases                         | file: location ~/.my_scripts/.my_aliases
 .my_aliases                         | alias: edit public aliases and apply .zshrc
-.my_private_aliases                 | vim ~/.my_private_scripts/.my_aliases && source ~/.zshrc'
+.my_private_aliases                 | alias: vim ~/.my_private_scripts/.my_aliases && source ~/.zshrc'
+.my_private_aliases                 | file: location ~/.my_private_scripts/.my_aliases
 .my_private_aliases                 | alias: edit private aliases and apply .zshrc
-recall_commands                     | ~/.my_scripts/terminal_matcher_curses.py --files ~/.my_scripts/command_help.txt ~/.my_private_scripts/command_help.txt
+recall_commands                     | alias: ~/.my_scripts/terminal_matcher_curses.py --files ~/.my_scripts/command_help.txt ~/.my_private_scripts/command_help.txt
 recall_commands                     | alias: run the script to recall commands
 recall_commands                     | alias: run the script to remember commands
 recall_commands                     | alias: run the script to remind terminal commands
