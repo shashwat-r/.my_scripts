@@ -20,6 +20,7 @@ alias bst='brew services stop'
 alias bsr='brew services restart'
 alias bsl='brew services list'
 
+# cd shortcuts
 alias ~='cd ~'
 alias Des='cd ~/Desktop'
 alias Doc='cd ~/Documents'
@@ -56,6 +57,13 @@ alias cd.......=.6
 function cde() {
     mkdir -p $1 && cd $1;
 }
+
+# git aliases
+alias gitconfig='cat ~/.gitconfig'
+alias gitconfig-sr='cat ~/.gitconfig-shashwat-r > ~/.gitconfig'
+alias gitconfig-vv='cat ~/.gitconfig-vidavolka > ~/.gitconfig'
+alias gitconfig-ag='cat ~/.gitconfig-agcigar > ~/.gitconfig'
+
 function chuck() {
 for i in {0..100}
     do
@@ -65,7 +73,8 @@ for i in {0..100}
 alias where='which'
 alias .a='conda activate'
 alias .d='conda deactivate'
-#alias python='/usr/local/bin/python3.8'
+# alias python='/usr/local/bin/python3.8'
+# alias python='$HOME/miniconda3/bin/python3'
 
 alias hi='echo "Hello there buddy :)"'
 # alias rebash='source ~/.bash_profile'
