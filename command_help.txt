@@ -1,0 +1,37 @@
+loaded_from                         | file: ~/.my_scripts/command_help.txt
+hi                                  | alias: test command
+hi                                  | alias: hi command
+cde                                 | alias: create and enter directory
+cde                                 | alias: create and enter folder
+cde                                 | alias: previously mag for make and go
+br                                  | alias: brew remove
+bi                                  | alias: brew install
+bcu                                 | alias: brew cleanup
+bss                                 | alias: brew services start
+bst                                 | alias: brew services stop
+bsr                                 | alias: brew services restart
+bsl                                 | alias: brew services list
+ls                                  | command: list non hidden files
+la                                  | alias: list hidden files
+ll                                  | alias: list all files as tables
+chuck                               | alias: print 100 empty lines and scroll down
+rebash (deprecated)                 | alias: to source ~/.bash_profile
+..zshrc                             | source ~/.zshrc
+..zshrc                             | alias: reapply .zshrc
+.zshrc                              | vim ~/.zshrc && source ~/.zshrc'
+.zshrc                              | alias: edit and apply .zshrc
+.my_aliases                         | vim ~/.my_scripts/.my_aliases && source ~/.zshrc'
+.my_aliases                         | alias: edit public aliases and apply .zshrc
+.my_private_aliases                 | vim ~/.my_private_scripts/.my_aliases && source ~/.zshrc'
+.my_private_aliases                 | alias: edit private aliases and apply .zshrc
+recall_commands                     | ~/.my_scripts/terminal_matcher_curses.py --files ~/.my_scripts/command_help.txt ~/.my_private_scripts/command_help.txt
+recall_commands                     | alias: run the script to recall commands
+recall_commands                     | alias: run the script to remember commands
+recall_commands                     | alias: run the script to remind terminal commands
+git credential-manager github list   --no-ui | command: list existing github account logins
+git credential-manager github login  --no-ui | command: log in with new github account
+git credential-manager github logout --no-ui | command: log out of github account
+.gitconfig-agcigar (deprecated)     | file: contains github username and email
+.gitconfig-vidavolka (deprecated)   | file: contains github username and email
+.gitconfig-shashwat-r (deprecated)  | file: contains github username, email, and credential helper
+_command_                           | _description_

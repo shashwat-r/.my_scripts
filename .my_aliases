@@ -76,7 +76,7 @@ alias .d='conda deactivate'
 # alias python='/usr/local/bin/python3.8'
 # alias python='$HOME/miniconda3/bin/python3'
 
-alias hi='echo "Hello there buddy :)"'
+alias hi='echo "Hello there :) Run recall_commands for bigger command list"'
 # alias rebash='source ~/.bash_profile'
 # alias .bp='vim ~/.bash_profile && source ~/.bash_profile'
 # alias .ba='vim ~/.bash_aliases && source ~/.bash_profile'
@@ -146,3 +146,5 @@ function list_pods(){
     echo "> kubectl get pods -n" $1
     kubectl get pods -n $1
 }
+
+alias recall_commands='~/.my_scripts/terminal_matcher_curses.py --files ~/.my_scripts/command_help.txt ~/.my_private_scripts/command_help.txt'
